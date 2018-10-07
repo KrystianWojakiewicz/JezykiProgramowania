@@ -32,10 +32,25 @@ public class Main {
         zad2(Liczba0, depth += 1);
     }
 
+    public static void zad3(int Liczba) {
+        int rozwiazania = 0;
+        for(int i = 1; i < Liczba -1; i++) {
+            for(int j = 1; j < Liczba -1; j++) {
+                if(i + j == Liczba && i < j) {
+                    rozwiazania++;
+                    System.out.println("rozwiazanie: " + i + " + " +j);
+                }
+            }
+        }
+        System.out.println("Liczba mozliwych rozwiazan: " + rozwiazania);
+    }
+
+
     public static void main(String[] args) {
 
         int MojaLiczba = 10;
-        zad2(10, 1);
+        zad3(10);
+        //zad2(10, 1);
         //System.out.println("ilosc liczb pierwszych mniejszych lub rownych " + MojaLiczba + " wynosi " + zad1(MojaLiczba));
     }
 }
